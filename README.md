@@ -1,66 +1,178 @@
-# Pranayom Yoga Center Management System
+# 🧘 Yoga Center Management System  
+### 🌐 Web-Based Project
 
-Welcome to the **Pranayom Yoga Center Management System** project. This is a web-based interface designed to manage a yoga training center, facilitating interactions between Administrators, Trainers, and Members.
+A complete web-based management system developed to handle the daily operations of a yoga center efficiently.  
+This application digitalizes administrative tasks such as member management, trainer assignment, class scheduling, attendance tracking, and payment records.
 
-## Project Description
-This project demonstrates the front-end design and basic logic for a Yoga Studio website. It focuses on a clean, modern aesthetic ("Pranayom") with specific features for different user roles. The system is built using **pure HTML, CSS, and Vanilla JavaScript** without any external frameworks, making it lightweight and easy to understand for educational purposes.
+---
 
-## Key Features
+## 📖 Project Description
 
-### Public Pages
-- **Landing Page (`index.html`)**: A welcoming home page displaying the hero section, yoga offerings, and user testimonials.
-- **Membership Plans (`membership.html`)**: Detailed pricing cards for Monthly, Annual, and Class Pack subscriptions, plus non-member drop-in rates.
-- **Privacy Policy (`policy.html`)**: Comprehensive privacy policy details.
-- **Terms & Conditions (`terms.html`)**: Full terms of service and user agreements.
+The **Yoga Center Management System** is designed to simplify and automate yoga center operations.  
+Instead of maintaining manual records, this system provides a centralized digital platform for managing members, trainers, classes, and payments.
 
-### Authentication
-- **Login Page (`login.html`)**: A dark-themed, modern login interface.
-    - Includes a **Role Toggle** to switch between "Member" and "Trainer".
-    - Simulates authentication logic using JavaScript.
+It improves operational efficiency, reduces errors, and enhances the overall user experience.
 
-## Folder Structure
-The project is organized into clear directories to separate concerns:
+---
+
+## ✨ Core Features
+
+### 🔐 Admin Module
+- Add, update, delete members
+- Add and manage trainers
+- Create and manage yoga classes
+- Assign trainers to classes
+- Monitor attendance records
+- Track membership payments
+- View dashboard statistics
+
+### 👤 Member Module
+- Member registration
+- View class schedules
+- Check membership details
+- View attendance history
+- Track payment status
+
+### 👩‍🏫 Trainer Module
+- View assigned classes
+- Access member list
+- Update attendance records
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|------------|----------|
+| HTML | Structure |
+| CSS | Styling |
+| JavaScript | Client-side interactivity |
+| PHP | Backend logic |
+| MySQL | Database management |
+| XAMPP | Local development server |
+
+---
+
+## 🗂️ Project Structure
 
 ```
-Web_Project/
+Yoga-Center-Management/
 │
-├── css/
-│   └── style.css       # Global styles and shared layout classes
+├── admin/
+│   ├── dashboard.php
+│   ├── manage_members.php
+│   └── manage_trainers.php
 │
-├── html/
-│   ├── index.html      # Home/Landing page
-│   ├── login.html      # Login interface
-│   ├── membership.html # Pricing and plans
-│   ├── policy.html     # Privacy Policy
-│   └── terms.html      # Terms and Conditions
+├── member/
+│   └── member_dashboard.php
 │
-├── images/             # Folder for project assets (images, icons)
+├── trainer/
+│   └── trainer_dashboard.php
 │
-└── README.md           # Project documentation
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── config.php
+├── index.php
+└── database.sql
 ```
 
-## How to Run
-Since this is a static site, you do not need any backend server.
+---
 
-1.  Navigate to the `html` folder.
-2.  Open `index.html` in your web browser (Chrome, Firefox, Edge, etc.).
-3.  Navigate through the links (Home, Membership Plans, Login).
+## 🗄️ Database Tables
 
-## Login Credentials (Simulated)
-The login functionality is simulated with JavaScript. Use the following credentials to test the different roles:
+- `admins`
+- `members`
+- `trainers`
+- `classes`
+- `attendance`
+- `payments`
 
-| Role | Username / Email | Password |
-| :--- | :--- | :--- |
-| **Member** | `member` | `member` |
-| **Trainer** | `trainer` | `trainer` |
-| **Admin** | `admin` | `admin` |
+---
 
-*(Note: The actual email format logic on the login page also accepts simple usernames for ease of testing)*
+## ⚙️ Installation & Setup
 
-## Technology Stack
-- **HTML5**: For semantic structure.
-- **CSS3**: For styling (Flexbox, Grid, Custom Themes).
-- **JavaScript (Vanilla)**: For simple form handling and navigation logic.
+### Step 1: Install Requirements
+- Install **XAMPP** or any local server with PHP & MySQL.
 
-## Author
-Developed as a web development learning project for a Yoga Training Center design.
+### Step 2: Clone the Repository
+```bash
+git clone https://github.com/your-username/Yoga-Center-Management.git
+```
+
+### Step 3: Move Project
+Copy the project folder into:
+```
+C:/xampp/htdocs/
+```
+
+### Step 4: Database Setup
+1. Open **phpMyAdmin**
+2. Create a database named `yoga_center`
+3. Import `database.sql`
+
+### Step 5: Configure Database Connection
+Update `config.php`:
+
+```php
+$host = "localhost";
+$dbname = "yoga_center";
+$username = "root";
+$password = "";
+```
+
+### Step 6: Run the Project
+Start Apache and MySQL from XAMPP.
+
+Open your browser:
+```
+http://localhost/Yoga-Center-Management/
+```
+
+---
+
+## 🎯 Project Objectives
+
+- Automate yoga center management
+- Reduce paperwork
+- Maintain accurate records
+- Improve administrative efficiency
+- Enhance member experience
+
+---
+
+## 🔮 Future Enhancements
+
+- Online payment gateway integration
+- Email & SMS notifications
+- Advanced analytics dashboard
+- Responsive mobile-friendly UI
+- Multi-branch management support
+- Role-based authentication system
+
+---
+
+## 📸 Screenshots
+
+*(Add screenshots of your project interface here)*
+
+---
+
+## 🤝 Contribution
+
+Contributions are welcome!  
+Feel free to fork this repository and submit a pull request.
+
+---
+
+## 👩‍💻 Author
+
+Developed as a Web Development Project.
+
+---
+
+## 📄 License
+
+This project is created for educational purposes.
